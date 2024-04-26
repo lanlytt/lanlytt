@@ -1,0 +1,60 @@
+# The URL the site will be built for
+base_url = "https://lanlan.moe"
+
+# The default author for pages
+author = "Lan Lytt"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# When set to "true", a feed is automatically generated.
+generate_feed = true
+
+# The taxonomies to be rendered for the site and their configuration of the default languages
+# Example:
+#     taxonomies = [
+#       {name = "tags", feed = true}, # each tag will have its own feed
+#       {name = "tags"}, # you can have taxonomies with the same name in multiple languages
+#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
+#       {name = "authors"}, # Basic definition: no feed or pagination
+#     ]
+#
+taxonomies = [{ name = "tags", paginate_by = 8 }]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+# The theme to use for code highlighting
+highlight_theme = "base16-ocean-light"
+
+[extra]
+# Put all your custom variables here
+# Header title
+slogan = "Little Zeal, "
+
+# Third party modules to be listed on the license page. 
+# Example:
+#     collect_licenses = [
+#         { name = "A", link = "", lic_3rd = "moda" }, # load `3rdparty/moda/LICENSE` or 3rdparty/moda`
+#         { name = "B", link = "", lic_path = "static/modb" }, # load `static/modb/LICENSE` or `static/modb`
+#         { name = "C", link = "", lic_text = "MIT .." }, # use inline license
+#     ]
+collect_licenses = [
+    { name = "Reseter.css", link = "https://github.com/xkrishguptaa/reseter.css", lic_3rd = "reseter" },
+]
+
+# Footer links
+links = [
+    { url = "https://github.com/lanlytt", name = "Github" },
+    { url = "https://twitter.com/lanlytt", name = "Twitter" },
+    { url = "https://instagram.com/lanlytt", name = "Instagram" },
+    { url = "mailto:lanlytt@outlook.com", name = "lanlytt@outlook.com" },
+]
+
+# Footer message
+blessing = "Wishing my writings benefit you. "

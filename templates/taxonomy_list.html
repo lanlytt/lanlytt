@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+  Taxonomy / '{{ taxonomy.name }}'
+{% endblock title %}
+
+{% block content %}
+  <ul class="taxonomy-list">
+    {% for taxonomy in terms %}
+      <li class="taxonomy-entry">
+        <a href="{{ taxonomy.permalink }}">{{ taxonomy.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock content %}
+

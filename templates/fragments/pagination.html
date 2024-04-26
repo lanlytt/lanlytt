@@ -1,0 +1,10 @@
+{% macro pagination(paginator) %}
+  <nav class="pagination">
+    {% if paginator.previous %}
+      <div><a class="pagination-previous" href="{{ paginator.previous }}">&#8249; Previous</a></div>
+    {% endif %}
+    {% if paginator.next %}
+      <div><a class="pagination-next" href="{{ paginator.next }}">Next &#8250;</a></div>
+    {% endif %}
+  </nav>
+{% endmacro pagination %}

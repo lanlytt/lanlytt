@@ -1,0 +1,13 @@
+{# Constants #}
+{% set HTTPS_PREFIX = "https://" %}
+
+{# Verifying consistency between CNAME and base URL (if static/CNAME exists and deployed with HTTPS) #}
+{% set cname = load_data(path="/static/CNAME", format="plain") | trim | lower %}
+{% set configured_url = config.base_url | trim | lower %}
+{% if cname != "" and configured_url is starting_with(HTTPS_PREFIX) %}
+  {% set configured_domain = configured_url | trim_start_matches(pat=HTTPS_PREFIX) %}
+  {% if cname != configured_domain %}
+    {{ load_data(path="/ [ERROR: CNAME=`" ~ CNAME ~ "` and BASE_URL=`"~ config.base_url ~"` aren't consistent]") }}
+  {% endif %}
+{% endif %}
+

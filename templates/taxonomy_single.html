@@ -1,0 +1,14 @@
+{% extends "taxonomy_single/base.html" %}
+{% import "fragments/post_entry.html" as post_entry %}
+
+{% block title %}
+  Term / '{{ taxonomy.name }}:{{ term.name }}' 
+{% endblock title %}
+
+{% block taxonomy_single_content %}
+  <div class="post-list">
+    {% for page in pages %}
+      {{ post_entry::post_entry(page=page) }}
+    {% endfor %}
+  </div>
+{% endblock taxonomy_single_content %}

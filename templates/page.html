@@ -1,0 +1,19 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+  {{ page.title }}
+{% endblock title %}
+
+{% block content %}
+  <div class="post-detail">
+    <h1 class="post-detail-title">{{ page.title }}</h1>
+    <div class="post-detail-date">{{ page.date | date(format="%B %d, %Y") }}</div>
+    <div class="post-detail-content">{{ page.content | safe }}</div>
+    <div class="post-detail-tags">
+      {% for tag in page.taxonomies["tags"] %}
+        <div><a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{tag}}</a></div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}
+

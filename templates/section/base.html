@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+{% import "fragments/pagination.html" as pagination %}
+
+{% block content %}
+  {{ section.content | safe }}
+  {% if paginator is defined %}
+    {% set pages = paginator.pages %}
+    {% block section_content %}
+    {% endblock section_content %}
+    {{ pagination::pagination(paginator=paginator) }}
+  {% else %}
+    {% set pages = section.pages %}
+    {% block section_content %}
+    {% endblock section_content %}
+  {% endif %}
+{% endblock content %}
+

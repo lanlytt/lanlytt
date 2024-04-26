@@ -1,0 +1,14 @@
+{% extends "section/base.html" %}
+{% import "fragments/post_entry.html" as post_entry %}
+
+{% block title %}
+  {{ section.title }}
+{% endblock title %}
+
+{% block section_content %}
+  <div class="post-list">
+    {% for page in pages %}
+      {{ post_entry::post_entry(page=page) }}
+    {% endfor %}
+  </div>
+{% endblock section_content %}
