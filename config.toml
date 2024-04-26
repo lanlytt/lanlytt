@@ -4,6 +4,10 @@ base_url = "https://lanlan.moe"
 # The default author for pages
 author = "Lan Lytt"
 
+# The site title and description; used in feeds by default.
+title = "Little Zeal, "
+description = "Where Little Lan write about her personal growth. "
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
