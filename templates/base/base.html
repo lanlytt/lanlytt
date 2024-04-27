@@ -40,7 +40,7 @@
         {% for link in config.extra.links %}
           <a href="{{link.url}}">{{link.name}}</a><sup>+</sup> | 
         {% endfor %}
-        <a href="{{ get_url(path="/atom.xml")}}">ATOM</a> |
+        <a href="{{ get_url(path="/atom.xml")}}">Feed</a> |
         <span class="blessing">{{ config.extra.blessing }}</span>
       </footer>
     </div>
