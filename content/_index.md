@@ -2,21 +2,21 @@
 title = "Little Zeal, "
 +++
 
-Hi, this is Little Lan. This website is where I write about my personal growth. While I can read English fluently, writing is still challenging for me. I will try my best to avoid mistakes. 
+Hi, this is Little Lan. This website is where I write about my personal growth. While I usually read documents in English, writing is still challenging for me. I will strive to be vigilant in avoiding grammatical errors.
 
 {{ hhr() }}
 {{ figure_fr37(path="/images/drawing.jpg") }}
 
-Drawing is one of my main interests, and I'm currently learning sketching and digital drawing with a tablet. My profile picture "Kaosu" (favorate one) is illustrated by [Shirabe Tsukiyama][shirabe]，authorized. 
+Drawing is one of my main interests, and I'm currently learning sketching and digital drawing with a tablet. My profile picture "Kaosu" (favorate one) is illustrated by [Shirabe Tsukiyama][shirabe]，authorized.
 
-[shirabe]: <https://www.pixiv.net/users/39203847>
+[shirabe]: https://www.pixiv.net/users/39203847
 
 {{ hhr() }}
 {{ figure_fr37(path="/images/piano.jpg") }}
 
-["Music has been a constant companion throughout my life, a source of solace, inspiration, and connection in both the brightest and darkest of times."][music_to_me] I'm delving into learning music theory and piano. 
+["Music has been a constant companion throughout my life, a source of solace, inspiration, and connection in both the brightest and darkest of times."][music_to_me] I'm delving into learning music theory and piano.
 
-[music_to_me]: <https://www.youthkiawaaz.com/2024/02/exploring-my-relationship-with-music/>
+[music_to_me]: https://www.youthkiawaaz.com/2024/02/exploring-my-relationship-with-music/
 
 {{ hhr() }}
 {{ figure_fr37(path="/images/japanese.jpg") }}
