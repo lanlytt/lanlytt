@@ -1,4 +1,4 @@
-//
+// 
 // Based on Reseter.css
 @use "../3rdparty/reseter/reseter.min.css"
 
@@ -6,7 +6,7 @@
 // Colors / Metrics
 $bg-color: #fafafa
 $color: #222
-$date-color: #444
+$date-color: #555
 $link-color: $color
 $blockquote-border-color: #e7e9ed
 $blockquote-bg-color: transparent
@@ -21,7 +21,7 @@ $table-2n-bg-color: $bg-color
 $mono-font-scaling: 96%
 
 // 
-// Root
+// Root elements
 
 html
     font-size: 15px
@@ -89,7 +89,6 @@ body
 .post-entry-date
     margin: 1rem 0
     color: $date-color
-
 .post-entry-more
     text-align: right
 
@@ -98,31 +97,6 @@ body
     display: flex
     gap: .5rem
     margin: 2rem 0
-
-// 
-// "Styling codeblocks" https://www.getzola.org/documentation/content/syntax-highlighting/#styling-codeblocks
-
-pre
-    padding: 1rem
-    overflow: auto
-
-pre[data-linenos]
-    padding: 1rem 0
-
-pre table td 
-    padding: 0
-
-pre table td:nth-of-type(1) 
-    text-align: center
-    user-select: none
-
-pre mark 
-    display: block
-    background-color: rgba(254, 252, 232, 0.9)
-
-pre table 
-    width: 100%
-    border-collapse: collapse
 
 // 
 // Common elements
@@ -209,7 +183,7 @@ img
 // Shortcodes
 
 // figure_fr37.html
-.figure_fr37
+.sc_banner
     margin: .5rem 0 .5rem .5rem
     float: right
     display: block
@@ -224,11 +198,34 @@ img
     -webkit-mask-size: $mask-size
 
 // hhr.html
-.hhr
+.sc_hidden_hr
     border-color: transparent
+
+// update.html
+.sc_update
+    margin: 1rem 0 1rem 0
+    color: $date-color
 
 // 
 // Patches
+
+// "Styling codeblocks" https://www.getzola.org/documentation/content/syntax-highlighting/#styling-codeblocks
+pre
+    padding: 1rem
+    overflow: auto
+pre[data-linenos]
+    padding: 1rem 0
+pre table td 
+    padding: 0
+pre table td:nth-of-type(1) 
+    text-align: center
+    user-select: none
+pre mark 
+    display: block
+    background-color: rgba(254, 252, 232, 0.9)
+pre table 
+    width: 100%
+    border-collapse: collapse
 
 // "Footnotes exports incorrect semantic html" https://github.com/pulldown-cmark/pulldown-cmark/issues/464
 .footnote-definition

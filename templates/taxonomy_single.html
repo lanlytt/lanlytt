@@ -2,7 +2,7 @@
 {% import "fragments/post_entry.html" as post_entry %}
 
 {% block title %}
-  Term / '{{ taxonomy.name }}:{{ term.name }}' 
+{{ term.name | capitalize }} / {{ taxonomy.name | capitalize }}
 {% endblock title %}
 
 {% block taxonomy_single_content %}

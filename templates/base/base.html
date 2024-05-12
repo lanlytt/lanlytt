@@ -1,3 +1,4 @@
+{# Checking configurations #}
 {% include "base/assertions.html" %}
 {# The basic website layout, extended by almost all templates #}
 <!DOCTYPE html>
@@ -10,12 +11,15 @@
     {# viewport-fit=cover is to support iPhone X rounded corners and notch in landscape #}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 
+    {# Title block #}
     <title>{% block title %}{{ config.extra.slogan }}{% endblock title %}</title>
 
-    {# CSS #}
-    <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
-    <link rel="stylesheet" href="{{ get_url(path="print.css") }}" media="print">
-    <link rel="shortcut icon" href="{{ get_url(path="icons/favicon.svg") }}" media="image/svg+xml">
+    {# Stylesheets #}
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+    <link rel="stylesheet" href="{{ get_url(path='print.css') }}" media="print">
+    
+    {# Site icons #}
+    {% include "base/favicons.html" %}
   </head>
 
   <body>
@@ -36,11 +40,11 @@
         {% endblock content %}
       </div>
       <footer>
-        <a href="{{ get_url(path="@/license.md")}}">Licenses</a> |
+        <a href="{{ get_url(path='@/license.md')}}">Licenses</a> |
         {% for link in config.extra.links %}
           <a href="{{link.url}}">{{link.name}}</a><sup>+</sup> | 
         {% endfor %}
-        <a href="{{ get_url(path="/atom.xml")}}">Feed</a> |
+        <a href="{{ get_url(path='atom.xml')}}">Feed</a> |
         <span class="blessing">{{ config.extra.blessing }}</span>
       </footer>
     </div>
