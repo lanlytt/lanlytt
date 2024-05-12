@@ -4,8 +4,6 @@ date = 2020-07-06
 taxonomies.tags = ["markdown"]
 +++
 
-> This article is for checking site styling and will be translated later.
-
 Markdown 是一门轻量级标记语言，用简洁的语法替代了手动排版，让我们更专注于写作。简而言之，我们通过一些符号告诉计算机「应当怎样排列一段文字」。
 
 这篇文章简单介绍了常用的语法，并附带一些示例与参考链接。这些语法占用了一部分标点符号，若正文中需要用到它们，使用 [转义字符](#zhuan-yi-zi-fu)。
