@@ -11,7 +11,7 @@
     <div class="post-detail-content">{{ page.content | safe }}</div>
     <div class="post-detail-tags">
       {% for tag in page.taxonomies["tags"] %}
-        <div><a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{tag}}</a></div>
+        <div><a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{tag}}</a></div>
       {% endfor %}
     </div>
   </div>

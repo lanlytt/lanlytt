@@ -1,6 +1,7 @@
 +++
 title = "Fixing Ctrl+` in VSCode"
 date = 2023-06-25
+updated = 2024-05-01
 taxonomies.tags = ["utilities"]
 +++
 
@@ -8,7 +9,7 @@ Yesterday, I encountered this [issue][issu] while coding with Visual Studio Code
 
 <!-- more -->
 
-{{ update(date="March 29, 2024")}}
+{{ update(date="2024-03-29")}}
 
 While it would be ideal to implement the fixer as a VSCode extension, I'm not familiar with front-end development. Currently, the fixer runs continuously in the background whenever the system is running, leading to some unnecessary troubles:
 
@@ -17,11 +18,11 @@ While it would be ideal to implement the fixer as a VSCode extension, I'm not fa
 
 To tackle these troubles, the fixer implements a naive detection. It operates only if the title of the active window ends with ` - Visual Studio Code` or ` - VSCode`.
 
-{{ update(date="April 29, 2024")}}
+{{ update(date="2024-04-29")}}
 
 Recently, I struggled to learn the basics of VSCode extension development and finally wrapped the fixer into an [extension][ext]. It works well and also avoids the negative effects caused by the non-extension one.
 
-{{ update(date="May 1, 2024")}}
+{{ update(date="2024-05-01")}}
 
 Today I just discovered that the root cause lies in the "Switching to this IME" option within the IME settings. By default, it occupies `` Ctrl+` `` and disabling it resolves the issue. So, all my previous work has been pointless all along. What a dramatic turn of events...
 

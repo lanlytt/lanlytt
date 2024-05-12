@@ -14,7 +14,7 @@ Drawing is one of my main interests, and I'm currently learning sketching and di
 {{ hhr() }}
 {{ banner(name="piano.jpg") }}
 
-["Music has been a constant companion throughout my life, a source of solace, inspiration, and connection in both the brightest and darkest of times."][music_to_me] I'm immersing myself in learning music theory and piano.
+["Music has been a constant companion throughout my life, a source of solace, inspiration, and connection in both the brightest and darkest of times."][music_to_me] I'm delving into learning music theory and piano.
 
 [music_to_me]: https://www.youthkiawaaz.com/2024/02/exploring-my-relationship-with-music/
 
