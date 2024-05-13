@@ -23,11 +23,9 @@
   </head>
 
   <body>
-    <div class="main-panel">
+    <div class="content">
       <header>
-        <div class="site-slogan">
-          <a href="{{ config.base_url }}">{{ config.extra.slogan }}</a>
-        </div>
+        <div class="site-slogan"><a href="{{ config.base_url }}">{{ config.extra.slogan }}</a></div>
         <nav class="site-nav">
           {% set blog = get_section(path="blog/_index.md") %}
           {% set tags = get_taxonomy(kind="tags") %}
@@ -35,10 +33,10 @@
           <div><a href="{{ tags.permalink }}">Tags</a></div>
         </nav>
       </header>
-      <div class="content-wrapper">
-        {% block content %}
-        {% endblock content %}
-      </div>
+      <main>
+        {% block main %}
+        {% endblock main %}
+      </main>
       <footer>
         <a href="{{ get_url(path='@/license.md')}}">Licenses</a> |
         {% for link in config.extra.links %}

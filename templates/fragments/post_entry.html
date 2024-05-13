@@ -1,14 +1,16 @@
 {% macro post_entry(page) %}
-  <div class="post-entry">
-    <h2 class="post-title">
+  <section class="post-entry">
+    <h2 class="title">
         <a href="{{ page.permalink }}">
         {{ page.title | safe }}
         </a>
     </h2>
-    <div class="post-entry-date">{{ page.date | date(format="%B %d, %Y") }}</div>
-    <div class="post-entry-summary">
+    <div class="date">
+      <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+    </div>
+    <div class="summary">
       {{ page.summary | safe }}
     </div>
-    <div class="post-entry-more"><a href="{{ page.permalink }}">Read more &#8250;</a></div>
-  </div>
+    <div class="more"><a href="{{ page.permalink }}">Read more &#8250;</a></div>
+  </section>
 {% endmacro post_entry %}

@@ -38,17 +38,17 @@ body
 // Pages
 
 // base.html
-.main-panel
+.content
     margin: 0 auto
     max-width: 54rem
     padding: 0 1rem
     display: flex
     flex-direction: column
     min-height: 100vh
-
     >header
         margin: .55rem 0
         display: flex
+        align-items: center
         font-weight: bold
         >.site-slogan
             flex: 1
@@ -58,11 +58,9 @@ body
             align-items: center
             gap: .5rem
             font-size: 1.2rem
-
-    >.content-wrapper
+    >main
         flex: 1
         margin-bottom: -1rem
-
     >footer
         color: $footer-color
         margin: 1rem 0 .6rem 0
@@ -70,31 +68,33 @@ body
             color: $footer-color
         >.blessing
             display: inline-block
-            margin-right: -2rem
+            margin-right: -2em
             white-space: nowrap
 
 // page.html
-.post-detail-date
-    margin: 1rem 0
-    color: $date-color
-.post-detail-tags
-    display: flex
-    gap: .5rem
-    margin: 1.5rem 0
+.post-detail
+    >.date
+        margin: 1rem 0
+        color: $date-color
+    >.tags
+        display: flex
+        gap: .5rem
+        margin: 1.5rem 0
 
 // 
 // Shared fragments
 
 // post_entry.html
-.post-entry-date
-    margin: 1rem 0
-    color: $date-color
-.post-entry-more
-    text-align: right
-.post-entry-summary>p:last-of-type::after
-    content: ".."
-    display: inline-block
-    margin-right: -1.5ch
+.post-entry
+    >.date
+        margin: 1rem 0
+        color: $date-color
+    >.more
+        text-align: right
+    >.summary>:last-of-type::after
+        content: ".."
+        display: inline-block
+        margin-right: -1.5ch
 
 // pagination.html
 .pagination
@@ -187,7 +187,7 @@ img
 // Shortcodes
 
 // figure_fr37.html
-.sc_banner
+.sc-banner
     margin: .5rem 0 .5rem .5rem
     float: right
     display: block
@@ -202,11 +202,11 @@ img
     -webkit-mask-size: $mask-size
 
 // hhr.html
-.sc_hidden_hr
+.sc-hhr
     border-color: transparent
 
 // update.html
-.sc_update
+.sc-update
     margin: 1rem 0
     color: $date-color
 

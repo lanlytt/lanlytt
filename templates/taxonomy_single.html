@@ -2,13 +2,11 @@
 {% import "fragments/post_entry.html" as post_entry %}
 
 {% block title %}
-{{ term.name | capitalize }} / {{ taxonomy.name | capitalize }}
+  {{ term.name | capitalize }} / {{ taxonomy.name | capitalize }}
 {% endblock title %}
 
-{% block taxonomy_single_content %}
-  <div class="post-list">
-    {% for page in pages %}
-      {{ post_entry::post_entry(page=page) }}
-    {% endfor %}
-  </div>
-{% endblock taxonomy_single_content %}
+{% block taxonomy_single_main %}
+  {% for page in pages %}
+    {{ post_entry::post_entry(page=page) }}
+  {% endfor %}
+{% endblock taxonomy_single_main %}

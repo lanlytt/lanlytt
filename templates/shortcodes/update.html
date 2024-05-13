@@ -1,1 +1,3 @@
-<div class="sc_update">{{ date | date(format="%B %d, %Y") }}</div>
+<div class="sc-update">
+    <time datetime="{{ page.date }}">{{ date | date(format="%B %d, %Y") }}</time>
+</div>

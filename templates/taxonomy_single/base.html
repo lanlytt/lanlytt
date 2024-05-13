@@ -1,16 +1,16 @@
 {% extends "base/base.html" %}
 {% import "fragments/pagination.html" as pagination %}
 
-{% block content %}
+{% block main %}
   {% if paginator is defined %}
     {% set pages = paginator.pages %}
-    {% block taxonomy_single_content %}
-    {% endblock taxonomy_single_content %}
+    {% block taxonomy_single_main %}
+    {% endblock taxonomy_single_main %}
     {{ pagination::pagination(paginator=paginator) }}
   {% else %}
     {% set pages = term.pages %}
-    {% block taxonomy_single_content %}
-    {% endblock taxonomy_single_content %}
+    {% block taxonomy_single_main %}
+    {% endblock taxonomy_single_main %}
   {% endif %}
-{% endblock content %}
+{% endblock main %}
 

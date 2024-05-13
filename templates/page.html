@@ -4,16 +4,18 @@
   {{ page.title }}
 {% endblock title %}
 
-{% block content %}
-  <div class="post-detail">
-    <h1 class="post-detail-title">{{ page.title }}</h1>
-    <div class="post-detail-date">{{ page.date | date(format="%B %d, %Y") }}</div>
-    <div class="post-detail-content">{{ page.content | safe }}</div>
-    <div class="post-detail-tags">
+{% block main %}
+  <article class="post-detail">
+    <h1 class="title">{{ page.title }}</h1>
+    <div class="date">
+      <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+    </div>
+    <section class="body">{{ page.content | safe }}</section>
+    <nav class="tags">
       {% for tag in page.taxonomies["tags"] %}
         <div><a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{tag}}</a></div>
       {% endfor %}
-    </div>
-  </div>
-{% endblock content %}
+    </nav>
+  </article>
+{% endblock main %}
 

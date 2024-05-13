@@ -5,10 +5,9 @@
   {{ section.title }}
 {% endblock title %}
 
-{% block section_content %}
-  <div class="post-list">
-    {% for page in pages %}
-      {{ post_entry::post_entry(page=page) }}
-    {% endfor %}
-  </div>
-{% endblock section_content %}
+{% block section_main %}
+  {{ section.content | safe }}
+  {% for page in pages %}
+    {{ post_entry::post_entry(page=page) }}
+  {% endfor %}
+{% endblock section_main %}

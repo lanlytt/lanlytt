@@ -4,11 +4,15 @@
   {{ page.title }}
 {% endblock title %}
 
-{% block content %}
-  {{ page.content | safe}}
-  <div id="acknowledgements">
+{% block main %}
+  <section id="disclaimer">
+    {{ page.content | safe}}
+  </section>
+  <section id="acknowledgements">
     <h1>Acknowledgements</h1>
-    This site is built with <a href="https://www.getzola.org/">Zola</a> and contains code from several excellent open source projects. 
+    <p>
+      This site is built with <a href="https://www.getzola.org/">Zola</a> and contains code from several excellent open source projects. 
+    </p>
     {% for module in config.extra.collect_licenses %}
       {% if "lic_3rd" in module %}
         {% set license = self::load_license(path="3rdparty/" ~ module.lic_3rd) %}
@@ -17,11 +21,13 @@
       {% elif "lic_text" in module %}
         {% set license = module.lic_text %}
       {% endif %}
-      <h2><a href="{{module.link}}">{{module.name}}</a></h2>
-      <pre>{{license}}</pre>
+      <section>
+        <h2><a href="{{module.link}}">{{module.name}}</a></h2>
+        <pre>{{license}}</pre>
+      </section>
     {% endfor %}
-  </div>
-{% endblock content %}
+  </section>
+{% endblock main %}
 
 
 {% macro load_license(path) %}
