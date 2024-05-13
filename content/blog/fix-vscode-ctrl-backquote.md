@@ -1,5 +1,5 @@
 +++
-title = "Fixing Ctrl+` in VSCode"
+title = "Fixing Ctrl+Backtick in VSCode"
 date = 2023-06-25
 updated = 2024-05-01
 taxonomies.tags = ["utilities"]
