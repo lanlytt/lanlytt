@@ -5,7 +5,7 @@ updated = 2024-05-01
 taxonomies.tags = ["utilities"]
 +++
 
-Yesterday, I encountered this [issue][issu] while coding with Visual Studio Code. The default terminal shortcut `` Ctrl+` `` doesn't work on my new laptop. It seems that some CJK keyboards/IMEs have reserved it for internal use. After some research, I figured out that the corresponding global hotkey is not affected. So I wrote a [fixer][proj] to register it as a global hotkey and forward its keypress messages. Fortunately, it worked.
+Yesterday, I encountered this [issue][issu] while coding with Visual Studio Code. The default terminal shortcut `` Ctrl+` `` doesn't work on my new laptop. After some research, I learned that some CJK keyboards/IMEs may reserve it for internal use, and the reserved key can still be used globally. So I wrote a [fixer][proj] to register it as a global hotkey and forward its keypress messages. Fortunately, it worked.
 
 <!-- more -->
 
@@ -20,7 +20,7 @@ To tackle these troubles, the fixer implements a naive detection. It operates on
 
 {{ update(date="2024-04-29")}}
 
-Recently, I struggled to learn the basics of VSCode extension development and finally wrapped the fixer into an [extension][ext]. It works well and also avoids the negative effects caused by the non-extension one.
+Recently, I struggled to learn about the basics of VSCode extension development and finally wrapped the fixer into an [extension][ext]. It works well and also avoids the negative effects caused by the non-extension one.
 
 {{ update(date="2024-05-01")}}
 
