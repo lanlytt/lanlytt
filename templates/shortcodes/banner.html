@@ -1,3 +1,4 @@
 {% set path = "banners/" ~ name %}
 {% set meta = get_image_metadata(path=path) %}
+
 <img class="sc-banner" src="{{ get_url(path=path) }}" width="{{meta.width}}" height="{{meta.height}}" />

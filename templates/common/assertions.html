@@ -7,6 +7,6 @@
 {% if cname != "" and configured_url is starting_with(HTTPS_PREFIX) %}
   {% set configured_domain = configured_url | trim_start_matches(pat=HTTPS_PREFIX) %}
   {% if cname != configured_domain %}
-    {{ load_data(path="/ [ERROR: CNAME=`" ~ cname ~ "` and BASE_URL=`"~ config.base_url ~"` aren't consistent]") }}
+    {{ throw(message="CNAME=`" ~ cname ~ "` and BASE_URL=`"~ config.base_url ~"` aren't consistent") }}
   {% endif %}
 {% endif %}

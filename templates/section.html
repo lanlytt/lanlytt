@@ -1,13 +1,26 @@
-{% extends "section/base.html" %}
-{% import "fragments/post_entry.html" as post_entry %}
+{% extends "common/base.html" %}
+{% import "common/macros.html" as macros %}
 
 {% block title %}
   {{ section.title }}
 {% endblock title %}
 
+{% block main %}
+  {% if paginator is defined %}
+    {% set pages = paginator.pages %}
+    {% block section_main %}
+    {% endblock section_main %}
+    {{ macros::gen_paginator(paginator=paginator) }}
+  {% else %}
+    {% set pages = section.pages %}
+    {% block section_main %}
+    {% endblock section_main %}
+  {% endif %}
+{% endblock main %}
+
 {% block section_main %}
   {{ section.content | safe }}
   {% for page in pages %}
-    {{ post_entry::post_entry(page=page) }}
+    {{ macros::gen_post_entry(page=page) }}
   {% endfor %}
 {% endblock section_main %}

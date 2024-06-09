@@ -1,0 +1,45 @@
+{% macro load_license(module) %}
+  {%- set path = "" -%}
+  {%- if "lic_3rd" in module -%}
+    {%- set path = "3rdparty/" ~ module.lic_3rd -%}
+  {%- elif "lic_path" in module -%}
+    {%- set path = module.path -%}
+  {%- elif "lic_text" in module -%}
+    {%- set license = module.lic_text -%}
+  {%- endif -%}
+  {%- if path != "" -%}
+    {%- set license = load_data(path=path ~ "/LICENSE", format="plain", required=false) -%}
+    {%- if license == "" -%}
+      {%- set license = load_data(path=path, format="plain", required=true) -%}
+    {%- endif -%}
+  {%- endif -%}
+  {{license}}
+{% endmacro load_license %}
+
+{% macro gen_paginator(paginator) %}
+  <nav class="paginator">
+    {% if paginator.previous %}
+      <div><a class="previous" href="{{ paginator.previous }}">&#8249; Previous</a></div>
+    {% endif %}
+    {% if paginator.next %}
+      <div><a class="next" href="{{ paginator.next }}">Next &#8250;</a></div>
+    {% endif %}
+  </nav>
+{% endmacro gen_paginator %}
+
+{% macro gen_post_entry(page) %}
+  <section class="post-entry">
+    <h2 class="title">
+        <a href="{{ page.permalink }}">
+          {{ page.title | safe }}
+        </a>
+    </h2>
+    <div class="date">
+      <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+    </div>
+    <div class="summary">
+      {{ page.summary | safe }}
+    </div>
+    <div class="more"><a href="{{ page.permalink }}">Read more &#8250;</a></div>
+  </section>
+{% endmacro gen_post_entry %}

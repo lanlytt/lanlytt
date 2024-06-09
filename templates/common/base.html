@@ -1,5 +1,5 @@
 {# Checking configurations #}
-{% include "base/assertions.html" %}
+{% include "common/assertions.html" %}
 {# The basic website layout, extended by almost all templates #}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ get_url(path='print.css') }}" media="print">
     
     {# Site icons #}
-    {% include "base/favicons.html" %}
+    {% include "common/favicons.html" %}
   </head>
 
   <body>
@@ -38,7 +38,7 @@
         {% endblock main %}
       </main>
       <footer>
-        <a href="{{ get_url(path='@/license.md')}}">Licenses</a> |
+        <a href="{{ get_url(path='@/licenses.md')}}">Licenses</a> |
         {% for link in config.extra.links %}
           <a href="{{link.url}}">{{link.name}}</a><sup>+</sup> | 
         {% endfor %}
