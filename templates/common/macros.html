@@ -3,15 +3,15 @@
   {%- if "lic_3rd" in module -%}
     {%- set path = "3rdparty/" ~ module.lic_3rd -%}
   {%- elif "lic_path" in module -%}
-    {%- set path = module.path -%}
+    {%- set path = module.lic_path -%}
   {%- elif "lic_text" in module -%}
     {%- set license = module.lic_text -%}
   {%- else -%}
-    throw "expect one of 'lic_3rd', 'lic_path', or 'lic_text', found none. "
+    {{ throw(message="expect one of 'lic_3rd', 'lic_path', or 'lic_text', found none. ") }}
   {%- endif -%}
   {%- if path != "" -%}
     {%- set license = load_data(path=path ~ "/LICENSE", format="plain", required=false) -%}
-    {%- if license == "" -%}
+    {%- if not license is string -%}
       {%- set license = load_data(path=path, format="plain") -%}
     {%- endif -%}
   {%- endif -%}
