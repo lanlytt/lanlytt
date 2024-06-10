@@ -6,11 +6,13 @@
     {%- set path = module.path -%}
   {%- elif "lic_text" in module -%}
     {%- set license = module.lic_text -%}
+  {%- else -%}
+    throw "expect one of 'lic_3rd', 'lic_path', or 'lic_text', found none. "
   {%- endif -%}
   {%- if path != "" -%}
     {%- set license = load_data(path=path ~ "/LICENSE", format="plain", required=false) -%}
     {%- if license == "" -%}
-      {%- set license = load_data(path=path, format="plain", required=true) -%}
+      {%- set license = load_data(path=path, format="plain") -%}
     {%- endif -%}
   {%- endif -%}
   {{license}}
