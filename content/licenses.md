@@ -2,6 +2,6 @@
 title = "Licenses"
 +++
 
-Unless otherwise stated, The information in this website is provided “AS IS” with no warranties, and confers no rights. The website is built with <a href="https://www.getzola.org/">Zola</a> and contains code from several excellent open-source projects.
+Except where otherwise noted, content on this site is provided “AS IS” with no warranties, and confers no rights. The website makes use of several excellent open-source projects, and their licenses are listed below in lexicographical order.
 
 {{ licenses() }}

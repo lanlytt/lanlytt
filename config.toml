@@ -40,19 +40,19 @@ highlight_code = true
 highlight_theme = "base16-ocean-light"
 
 [extra]
-# Put all your custom variables here
 # Header title
 slogan = "Little Zeal, "
 
-# Third party modules to be listed on the license page. 
+# Third party modules to be listed in the shortcode `licenses`. 
 # Example:
-#     collect_licenses = [
+#     licenses = [
 #         { name = "A", link = "", lic_3rd = "moda" }, # load `3rdparty/moda/LICENSE` or 3rdparty/moda`
 #         { name = "B", link = "", lic_path = "static/modb" }, # load `static/modb/LICENSE` or `static/modb`
 #         { name = "C", link = "", lic_text = "MIT .." }, # use inline license
 #     ]
-collect_licenses = [
+licenses = [
     { name = "Reseter.css", link = "https://github.com/xkrishguptaa/reseter.css", lic_3rd = "reseter" },
+    { name = "Zola", link = "https://github.com/getzola/zola", lic_3rd = "zola" },
 ]
 
 # Footer links
