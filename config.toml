@@ -60,7 +60,7 @@ links = [
     { url = "https://github.com/lanlytt", name = "Github" },
     { url = "https://twitter.com/lanlytt", name = "Twitter" },
     { url = "https://instagram.com/lanlytt", name = "Instagram" },
-    { url = "mailto:lanlytt@mail.lanlan.moe", name = "lanlytt@mail.lanlan.moe" },
+    { url = "mailto:lanlytt@outlook.com", name = "lanlytt@outlook.com" },
 ]
 
 # Footer message
