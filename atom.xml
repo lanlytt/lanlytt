@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Little Zeal, </title>
+    <subtitle>Where Little Lan write about her personal growth. </subtitle>
+    <link href="https://lanlan.moe/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://lanlan.moe"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-05-01T00:00:00+00:00</updated>
+    <id>https://lanlan.moe/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Fixing Ctrl+Backtick in VSCode</title>
+        <published>2023-06-25T00:00:00+00:00</published>
+        <updated>2024-05-01T00:00:00+00:00</updated>
+        <author>
+          <name>Lan Lytt</name>
+        </author>
+        <link rel="alternate" href="https://lanlan.moe/blog/fix-vscode-ctrl-backquote/" type="text/html"/>
+        <id>https://lanlan.moe/blog/fix-vscode-ctrl-backquote/</id>
+        
+        <summary type="html">&lt;p&gt;Yesterday, I encountered this &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Microsoft&#x2F;vscode&#x2F;issues&#x2F;63659&quot;&gt;issue&lt;&#x2F;a&gt; while coding with Visual Studio Code. The default terminal shortcut &lt;code&gt;Ctrl+`&lt;&#x2F;code&gt; didn&#x27;t work on my new laptop. After some research, I learned that some CJK keyboards&#x2F;IMEs may reserve it for internal use, and the reserved key can still be used globally. So I tried to write a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lanlytt&#x2F;vscode-cjk-toggle-terminal-fixer&quot;&gt;fixer&lt;&#x2F;a&gt; to register it as a global hotkey and forward its keypress messages. Fortunately, it worked.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Markdown Examples</title>
+        <published>2020-07-06T00:00:00+00:00</published>
+        <updated>2020-07-06T00:00:00+00:00</updated>
+        <author>
+          <name>Lan Lytt</name>
+        </author>
+        <link rel="alternate" href="https://lanlan.moe/blog/markdown-examples/" type="text/html"/>
+        <id>https://lanlan.moe/blog/markdown-examples/</id>
+        
+        <summary type="html">&lt;p&gt;Markdown 是一门轻量级标记语言，用简洁的语法替代了手动排版，让我们更专注于写作。简而言之，我们通过一些符号告诉计算机「应当怎样排列一段文字」。&lt;&#x2F;p&gt;
+&lt;p&gt;这篇文章简单介绍了常用的语法，并附带一些示例与参考链接。这些语法占用了一部分标点符号，若正文中需要用到它们，使用 &lt;a href=&quot;https:&#x2F;&#x2F;lanlan.moe&#x2F;blog&#x2F;markdown-examples&#x2F;#zhuan-yi-zi-fu&quot;&gt;转义字符&lt;&#x2F;a&gt;。&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>
